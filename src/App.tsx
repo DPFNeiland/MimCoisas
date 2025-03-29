@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Notes from "./pages/Notes";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"
+import Algebralinear from "./pages/Algebralinear";
 import "./styles/global.css";
 
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/notes" element={<Notes />} />
+        <Route path="/notes/algebralinear" element={<Algebralinear />}></Route>
       </Routes>
       <Footer />
     </Router>
