@@ -1,19 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Notes from "./pages/Notes";
+import Subject from "./pages/Subject";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          A ESPM destruiu minha vida
-        </p>
-
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/notes" element={<Notes />} />
+        <Route path="/notes/:subjectId" element={<Subject />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
