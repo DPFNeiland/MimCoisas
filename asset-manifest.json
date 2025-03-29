@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/MimCoisas/static/css/main.74dc5972.css",
-    "main.js": "/MimCoisas/static/js/main.55850d3c.js",
-    "static/js/453.d4722a7d.chunk.js": "/MimCoisas/static/js/453.d4722a7d.chunk.js",
-    "static/media/logo.svg": "/MimCoisas/static/media/logo.d9b60c22732d8780fe8eface17a7e207.svg",
+    "main.css": "/MimCoisas/static/css/main.574d5e02.css",
+    "main.js": "/MimCoisas/static/js/main.e3c89869.js",
     "index.html": "/MimCoisas/index.html",
-    "main.74dc5972.css.map": "/MimCoisas/static/css/main.74dc5972.css.map",
-    "main.55850d3c.js.map": "/MimCoisas/static/js/main.55850d3c.js.map",
-    "453.d4722a7d.chunk.js.map": "/MimCoisas/static/js/453.d4722a7d.chunk.js.map"
+    "main.574d5e02.css.map": "/MimCoisas/static/css/main.574d5e02.css.map",
+    "main.e3c89869.js.map": "/MimCoisas/static/js/main.e3c89869.js.map"
   },
   "entrypoints": [
-    "static/css/main.74dc5972.css",
-    "static/js/main.55850d3c.js"
+    "static/css/main.574d5e02.css",
+    "static/js/main.e3c89869.js"
   ]
 }
