@@ -1,49 +1,45 @@
-// src/pages/Subject.tsx
 import React from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
-import "katex/dist/katex.min.css"; // Importando os estilos para LaTeX
 
-const Subject: React.FC = () => {
-  const { subjectId } = useParams<{ subjectId: string }>();
-  const isAdmin = localStorage.getItem("isAdmin") === "true";
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  link?: string;
+}
 
-  if (!subjectId) {
-    return <div>Erro: Matéria não encontrada.</div>;
-  }
+const projects: Project[] = [
+  {
+    id: 1,
+    title: "Meu Primeiro Projeto",
+    description: "Um projeto que fiz usando TypeScript e React.",
+    link: "https://github.com/seu-usuario/meu-projeto",
+  },
+  {
+    id: 2,
+    title: "Sistema de Gestão",
+    description: "Aplicação web para gerenciamento de tarefas.",
+    link: "https://github.com/seu-usuario/gestao-app",
+  },
+  {
+    id: 3,
+    title: "Jogo em JavaScript",
+    description: "Pequeno jogo de plataforma feito com JavaScript puro.",
+  },
+];
 
-  // Simulando anotações para a matéria
-  const notes = [
-    {
-      id: 1,
-      content: "## Matrizes e Determinantes\nA matriz identidade é representada por $I_n$.",
-    },
-  ];
-
-  const handleDelete = (noteId: number) => {
-    if (isAdmin) {
-      // Lógica de exclusão de anotação
-      alert(`Anotação ${noteId} excluída!`);
-    } else {
-      alert("Você não tem permissão para excluir anotações.");
-    }
-  };
-
+const Projects: React.FC = () => {
   return (
-    <div className="subject-container">
-      <h1>Anotações de {subjectId.replace("-", " ")}</h1>
-      <Link to="/notes">← Voltar para Anotações</Link>
-      <div className="notes-list">
-        {notes.map((note) => (
-          <div key={note.id} className="note">
-            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
-              {note.content}
-            </ReactMarkdown>
-            {isAdmin && (
-              <button onClick={() => handleDelete(note.id)}>Excluir</button>
+    <div className="projects-container">
+      <h1>Meus Projetos</h1>
+      <div className="projects-list">
+        {projects.map((project) => (
+          <div key={project.id} className="project-card">
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            {project.link && (
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                Ver no GitHub
+              </a>
             )}
           </div>
         ))}
@@ -52,4 +48,4 @@ const Subject: React.FC = () => {
   );
 };
 
-export default Subject;
+export default Projects;
