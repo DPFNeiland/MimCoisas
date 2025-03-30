@@ -8,5 +8,4 @@ if (root) {
   ReactDOM.createRoot(root).render(<App />);
 }
 
-// Adicione esta linha no final do arquivo:
 export {};

@@ -137,3 +137,14 @@ body {
     text-decoration: underline;
   }
   
+  footer {
+    width: 100%;
+    min-height: 60px;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Se precisar de um footer fixo */
+    bottom: 0;
+  }
+  
