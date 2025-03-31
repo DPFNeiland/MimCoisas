@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/linearalgebra.css"
-import VectorPlot from "./Vectors/vectorplot";
-import VectorAddition from "./Vectors/VectorAddition";
+import VectorPlot from "../components/Vectors/vectorplot";
+import VectorAddition from "../components/Vectors/VectorAddition";
 
 const Algebralinear: React.FC = () => {
   return (
